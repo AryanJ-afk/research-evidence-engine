@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+import psycopg
+from fastapi import FastAPI, HTTPException
 from database import get_connection
 
 app = FastAPI(title="Research Evidence Enginer")
@@ -9,9 +10,12 @@ def health() -> dict[str, str]:
 
 @app.get("/health/db")
 def database_health() -> dict[str, bool]:
-    with get_connection() as connection:
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT 1")
-            result = cursor.fetchone()
+    try:
+        with get_connection() as connection:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT 1")
+                result = cursor.fetchone()
+    except psycopg.Error as exe:
+        raise HTTPException(status_code=503, detail="Database Unavailable") from exe
     
     return {"connected": result == (1,)}
