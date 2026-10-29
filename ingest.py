@@ -6,6 +6,16 @@ import hashlib
 from datetime import date
 import psycopg
 from email.utils import parsedate_to_datetime
+from database import get_connection
+
+TARGET_CATEGORIES = {"cs.AI", "cs.CL", "cs.LG", "cs.IR", "stat.ML"}
+
+def is_target_paper(record: dict[str, Any]) -> bool:
+    return any(
+        category in TARGET_CATEGORIES
+        for category in record["categories"].split()
+    )
+
 
 def iter_records(file_path: Path) -> Iterator[dict[str, Any]]:
     with file_path.open("r", encoding="utf-8") as file:
@@ -13,11 +23,14 @@ def iter_records(file_path: Path) -> Iterator[dict[str, Any]]:
             if line.strip():
                 yield json.loads(line)
 
+
 def normalize_whitespace(text: str) -> str:
     return " ".join(text.split())
 
+
 def compute_content_hash(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
 
 def prepare_paper(record: dict[str, Any]) -> dict[str, Any]:
     paper = {
@@ -40,6 +53,7 @@ def prepare_paper(record: dict[str, Any]) -> dict[str, Any]:
     paper["content_hash"] = compute_content_hash(serialized)
 
     return paper
+
 
 def insert_paper(connection: psycopg.Connection, paper: dict[str, Any]) -> None:
     with connection.cursor() as cursor:
@@ -65,3 +79,24 @@ def insert_paper(connection: psycopg.Connection, paper: dict[str, Any]) -> None:
             """,
             paper,
         )
+        
+
+def ingest_papers(file_path: Path, limit: int = 1000) -> int:
+    if limit <= 0:
+        raise ValueError("limit must be greater than zero")
+
+    processed = 0
+
+    with get_connection() as connection:
+        for record in iter_records(file_path):
+            if not is_target_paper(record):
+                continue
+
+            paper = prepare_paper(record)
+            insert_paper(connection, paper)
+            processed += 1
+
+            if processed >= limit:
+                break
+
+    return processed
