@@ -4,7 +4,7 @@ from typing import Any
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from search import keyword_search
+from app.search import keyword_search
 
 def benchmark_keyword_search(query: str, runs: int=20, limit: int=5) -> dict[str, Any]:
     if runs < 2:

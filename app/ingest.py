@@ -6,7 +6,7 @@ import hashlib
 from datetime import date
 import psycopg
 from email.utils import parsedate_to_datetime
-from database import get_connection
+from app.database import get_connection
 
 TARGET_CATEGORIES = {"cs.AI", "cs.CL", "cs.LG", "cs.IR", "stat.ML"}
 

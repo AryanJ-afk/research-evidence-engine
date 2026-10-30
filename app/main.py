@@ -1,8 +1,8 @@
 import psycopg
 from typing import Any
 from fastapi import FastAPI, HTTPException, Query
-from database import get_connection
-from search import keyword_search
+from app.database import get_connection
+from app.search import keyword_search
 
 app = FastAPI(title="Research Evidence Enginer")
 

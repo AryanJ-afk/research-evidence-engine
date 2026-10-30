@@ -1,6 +1,6 @@
 from typing import Any
 from psycopg.rows import dict_row
-from database import get_connection
+from app.database import get_connection
 
 
 def keyword_search(query: str, limit: int = 5) -> list[dict[str, Any]]:
