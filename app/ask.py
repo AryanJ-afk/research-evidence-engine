@@ -59,6 +59,10 @@ def ask(request: AskRequest):
         "question": request.question,
         "retrieval_method": "semantic",
         "generation_model": GENERATION_MODEL,
+        "context_paper_ids": [
+            paper["arxiv_id"]
+            for paper in state["papers"]
+        ],
         **state["result"],
         "generation_usage": state.get("usage", {}),
         "pipeline_ms": round(
