@@ -1,0 +1,21 @@
+                                                                           QUERY PLAN                                                                           
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=34.58..34.59 rows=1 width=972) (actual time=1.345..1.347 rows=6 loops=1)
+   Buffers: shared hit=23
+   ->  Sort  (cost=34.58..34.59 rows=1 width=972) (actual time=1.345..1.346 rows=6 loops=1)
+         Sort Key: (ts_rank(to_tsvector('english'::regconfig, ((p.title || ' '::text) || p.abstract)), '''graph'' & ''decomposit'''::tsquery)) DESC, p.arxiv_id
+         Sort Method: quicksort  Memory: 33kB
+         Buffers: shared hit=23
+         ->  Bitmap Heap Scan on papers p  (cost=30.05..34.57 rows=1 width=972) (actual time=0.351..1.273 rows=6 loops=1)
+               Recheck Cond: (to_tsvector('english'::regconfig, ((title || ' '::text) || abstract)) @@ '''graph'' & ''decomposit'''::tsquery)
+               Heap Blocks: exact=6
+               Buffers: shared hit=17
+               ->  Bitmap Index Scan on papers_search_gin_idx  (cost=0.00..30.05 rows=1 width=0) (actual time=0.136..0.136 rows=6 loops=1)
+                     Index Cond: (to_tsvector('english'::regconfig, ((title || ' '::text) || abstract)) @@ '''graph'' & ''decomposit'''::tsquery)
+                     Buffers: shared hit=7
+ Planning:
+   Buffers: shared hit=192 read=1
+ Planning Time: 4.029 ms
+ Execution Time: 1.461 ms
+(17 rows)
+

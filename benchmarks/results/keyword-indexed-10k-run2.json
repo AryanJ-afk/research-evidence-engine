@@ -1,0 +1,795 @@
+{
+  "label": "keyword-indexed-10k",
+  "created_at": "2026-11-07T05:06:09.683165+00:00",
+  "declared_paper_count": 10000,
+  "base_url": "http://localhost:8000",
+  "query_file_sha256": "357b388bfe64affc51fb258e9bf6d3f20d97e617174fc684e5cbe77043e5e869",
+  "rounds": 10,
+  "concurrency": 1,
+  "result_limit": 10,
+  "client_timeout_seconds": 10,
+  "shuffle_seed": 42,
+  "summary": {
+    "requests": 100,
+    "successful": 100,
+    "failed": 0,
+    "error_rate_percent": 0.0,
+    "successful_p50_ms": 16.817,
+    "successful_p95_ms": 170.593,
+    "errors": {}
+  },
+  "warmup_results": [
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 33.136
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 13.53
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 53.634
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.533
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 180.152
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 137.778
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 21.951
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 63.769
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.305
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 12.344
+    }
+  ],
+  "results": [
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 49.832
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.006
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 11.885
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.792
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 131.252
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 11.624
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.867
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 11.41
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 132.698
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.529
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.11
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 11.227
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 132.293
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 20.749
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 115.533
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 151.616
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 16.817
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 55.455
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 20.188
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 58.29
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 11.156
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.495
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 50.258
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 21.675
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 11.136
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.868
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 10.252
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 18.483
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 59.717
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 10.256
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.349
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 57.781
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 12.994
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.685
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 175.462
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 170.593
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.368
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 52.91
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 128.51
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 51.076
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 18.858
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.83
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.473
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 12.1
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.533
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 18.639
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.145
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 13.666
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 60.024
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 170.715
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.876
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 19.8
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 50.667
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.464
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 19.811
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.134
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 13.998
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 13.786
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 50.354
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 57.961
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 167.413
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 129.396
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 19.017
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 58.936
+    },
+    {
+      "query": "dark matter",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 52.218
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.197
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.837
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 10.864
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 10.776
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 10.757
+    },
+    {
+      "query": "diphoton",
+      "status": 200,
+      "error": null,
+      "returned": 2,
+      "latency_ms": 10.987
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 127.806
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 59.585
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.144
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 11.171
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 11.355
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 128.34
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.908
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 169.533
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 62.835
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 173.735
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 14.216
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 60.051
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.711
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 58.21
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 168.952
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 167.309
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 127.25
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 13.453
+    },
+    {
+      "query": "zzzznonexistenttermzzzz",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 12.619
+    },
+    {
+      "query": "neural network",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 22.24
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 12.932
+    },
+    {
+      "query": "optimization",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 58.688
+    },
+    {
+      "query": "the and",
+      "status": 200,
+      "error": null,
+      "returned": 0,
+      "latency_ms": 10.847
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 12.721
+    },
+    {
+      "query": "galaxy",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 127.379
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 177.992
+    },
+    {
+      "query": "stirling cycle",
+      "status": 200,
+      "error": null,
+      "returned": 1,
+      "latency_ms": 13.595
+    },
+    {
+      "query": "quantum",
+      "status": 200,
+      "error": null,
+      "returned": 10,
+      "latency_ms": 176.498
+    },
+    {
+      "query": "graph decompositions",
+      "status": 200,
+      "error": null,
+      "returned": 6,
+      "latency_ms": 13.47
+    }
+  ]
+}

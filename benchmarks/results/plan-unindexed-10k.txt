@@ -1,0 +1,22 @@
+                                                                           QUERY PLAN                                                                           
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=3966.90..3966.90 rows=1 width=972) (actual time=645.230..647.386 rows=6 loops=1)
+   Buffers: shared hit=1672
+   ->  Sort  (cost=3966.90..3966.90 rows=1 width=972) (actual time=645.229..647.383 rows=6 loops=1)
+         Sort Key: (ts_rank(to_tsvector('english'::regconfig, ((p.title || ' '::text) || p.abstract)), '''graph'' & ''decomposit'''::tsquery)) DESC, p.arxiv_id
+         Sort Method: quicksort  Memory: 33kB
+         Buffers: shared hit=1672
+         ->  Gather  (cost=1000.00..3966.89 rows=1 width=972) (actual time=645.068..647.296 rows=6 loops=1)
+               Workers Planned: 1
+               Workers Launched: 1
+               Buffers: shared hit=1666
+               ->  Parallel Seq Scan on papers p  (cost=0.00..2966.79 rows=1 width=972) (actual time=323.735..642.679 rows=3 loops=2)
+                     Filter: (to_tsvector('english'::regconfig, ((title || ' '::text) || abstract)) @@ '''graph'' & ''decomposit'''::tsquery)
+                     Rows Removed by Filter: 4997
+                     Buffers: shared hit=1666
+ Planning:
+   Buffers: shared hit=160
+ Planning Time: 3.129 ms
+ Execution Time: 647.503 ms
+(18 rows)
+
