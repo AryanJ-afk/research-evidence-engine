@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
 
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - research_postgres_data_v2:/var/lib/postgresql/data
 
     healthcheck:
       test:
@@ -36,4 +36,4 @@ services:
         condition: service_healthy
 
 volumes:
-  postgres_data:
+  research_postgres_data_v2:
