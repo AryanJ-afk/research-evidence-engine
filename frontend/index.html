@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Evidence Engine</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">Research Evidence Engine</a>
+        <a class="docs-link" href="/docs">API docs ↗</a>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">A RESEARCH ASSISTANT WITH SOURCES</p>
+            <h1>Ask a question.<br>Explore the evidence.</h1>
+            <p class="intro-text">
+                Search 10,000 research papers and get concise answers
+                linked to the abstracts that support them.
+            </p>
+        </section>
+
+        <section class="question-panel" aria-labelledby="question-label">
+            <form id="question-form">
+                <label id="question-label" for="question">
+                    What would you like to understand?
+                </label>
+
+                <textarea
+                    id="question"
+                    name="question"
+                    rows="3"
+                    maxlength="300"
+                    required
+                    placeholder="Ask about a research topic, method, or finding..."
+                ></textarea>
+
+                <div class="form-footer">
+                    <span class="muted">
+                        Evidence is limited to paper titles and abstracts.
+                    </span>
+                    <button id="submit-button" type="submit">
+                        Find evidence →
+                    </button>
+                </div>
+            </form>
+
+            <div class="examples" aria-label="Example questions">
+                <span class="muted">Try a question</span>
+                <button class="example" type="button">
+                    What do the abstracts say about decomposing sparse graphs?
+                </button>
+                <button class="example" type="button">
+                    Which real-world networks were studied in Extracting the hierarchical organization of complex systems?
+                </button>
+            </div>
+        </section>
+
+        <p id="request-status" class="request-status"
+           role="status" aria-live="polite"></p>
+
+        <p id="error-message" class="error-message"
+           role="alert" hidden></p>
+
+        <section id="results" hidden aria-labelledby="answer-heading">
+            <div class="results-header">
+                <div>
+                    <p class="eyebrow">RESEARCH RESPONSE</p>
+                    <h2 id="answer-heading">What the evidence says</h2>
+                </div>
+                <span id="result-meta" class="muted"></span>
+            </div>
+
+            <p id="answered-question" class="answered-question"></p>
+
+            <div class="results-grid">
+                <article class="answer-card">
+                    <div id="answer-content"></div>
+                </article>
+
+                <aside id="sources-panel" aria-labelledby="sources-heading">
+                    <h3 id="sources-heading">Sources</h3>
+                    <p class="muted source-hint">
+                        Open a paper to inspect its abstract.
+                    </p>
+                    <div id="source-list"></div>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            Research summaries can miss nuance. Inspect the cited abstracts
+            before relying on an answer.
+        </footer>
+    </main>
+</body>
+</html>

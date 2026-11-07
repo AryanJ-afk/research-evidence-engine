@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 import logging
+from pathlib import Path
 
 import psycopg
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.database import get_connection
 from app.search import router as search_router
@@ -21,11 +23,18 @@ app.include_router(search_router)
 app.include_router(semantic_search_router)
 app.include_router(ask_router)
 
-@app.get("/")
+FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+
+app.mount(
+    "/static",
+    StaticFiles(directory=FRONTEND_DIR),
+    name="static",
+)
+
+
+@app.get("/", include_in_schema=False)
 def root():
-    return {
-        "message": "Welcome to Research Evidence Engine"
-    }
+    return FileResponse(FRONTEND_DIR / "index.html")
 
 
 @app.get("/health")
