@@ -5,6 +5,7 @@ import psycopg
 from fastapi.responses import JSONResponse
 
 from app.database import get_connection
+from app.search import router as search_router
 
 logger = logging.getLogger(__name__)
 
@@ -12,6 +13,8 @@ app = FastAPI(
     title="Research Evidence Engine",
     version="0.1.0",
 )
+
+app.include_router(search_router)
 
 
 @app.get("/")
