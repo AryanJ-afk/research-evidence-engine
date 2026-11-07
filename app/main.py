@@ -7,6 +7,7 @@ from fastapi.responses import JSONResponse
 from app.database import get_connection
 from app.search import router as search_router
 from app.semantic_search import router as semantic_search_router
+from app.ask import router as ask_router
 
 
 logger = logging.getLogger(__name__)
@@ -18,6 +19,7 @@ app = FastAPI(
 
 app.include_router(search_router)
 app.include_router(semantic_search_router)
+app.include_router(ask_router)
 
 @app.get("/")
 def root():

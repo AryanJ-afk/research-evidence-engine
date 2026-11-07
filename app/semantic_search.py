@@ -51,11 +51,7 @@ def get_embedding_client():
     )
 
 
-@router.get("/search/semantic")
-def semantic_search(
-    q: str = Query(min_length=1, max_length=300),
-    limit: int = Query(default=10, ge=1, le=50),
-):
+def retrieve_semantic(q: str, limit: int):
     query_text = q.strip()
 
     if not query_text:
@@ -150,3 +146,11 @@ def semantic_search(
         "retrieval_ms": round(retrieval_ms, 2),
         "papers": papers,
     }
+    
+    
+@router.get("/search/semantic")
+def semantic_search(
+    q: str = Query(min_length=1, max_length=300),
+    limit: int = Query(default=10, ge=1, le=50),
+):
+    return retrieve_semantic(q=q, limit=limit)
