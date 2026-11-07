@@ -1,0 +1,9 @@
+{
+  "model": "text-embedding-3-small",
+  "papers": 10000,
+  "total_input_tokens": 1940780,
+  "longest_input_tokens": 611,
+  "application_input_limit": 8000,
+  "oversized_paper_ids": [],
+  "estimated_embedding_cost_usd": 0.038816
+}
