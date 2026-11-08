@@ -6,11 +6,7 @@ Baseline: evaluation/results/test-v1-run1.jsonl
 
 ## Method
 
-Assistant-assisted comparison of answers with their cited abstracts,
-using the same rubric as the baseline. The project author reviewed and confirmed the judgments for test-01, test-04, and test-06. The remaining cases were reviewed by the assistant.
-
-This is a development-set comparison: the baseline failures informed
-the prompt changes.
+This is a development-set comparison: the baseline failures informed the prompt changes.
 
 ## Results
 

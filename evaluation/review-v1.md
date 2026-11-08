@@ -5,8 +5,6 @@ Run: evaluation/results/test-v1-run1.jsonl
 
 ## Method
 
-Assistant-assisted review against cited abstracts, with author-confirmed decisions on the three flagged cases.
-
 An answerable case passes only if it answers the question correctly, supports every factual claim with its citations, and preserves the
 sources' conditions, uncertainty, and scope.
 
