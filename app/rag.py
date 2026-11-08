@@ -110,6 +110,17 @@ Rules:
 - Preserve conditions, qualifications, and scope from the abstracts;
   do not turn a result about particular graph classes into a universal claim.
 - Avoid repeating information across claims.
+- Give the minimum information needed to answer the question completely.
+  Omit additional findings or experimental details that are not needed.
+- Keep different studies and experimental setups distinct. Do not imply
+  that a method or result from one paper belongs to another paper.
+  When multiple studies are necessary, explicitly distinguish them.
+- Preserve the source's level of certainty. Describe proposed explanations,
+  hypotheses, predictions, and preliminary findings as such; do not
+  present them as established observations.
+- Treat time-dependent statements in abstracts as historical statements
+  about the cited study. Use phrases such as "the observations considered
+  in the study" rather than implying they describe current knowledge.
 """
 
 
